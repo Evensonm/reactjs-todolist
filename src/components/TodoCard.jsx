@@ -1,5 +1,6 @@
 import React from 'react'
 
+// props handed to cards through App.jsx. card renders todo item and buttons for func handling
 export default function TodoCard(props) {
     const { children, handleDeleteTodo, index, handleEditTodo } = props
     return (

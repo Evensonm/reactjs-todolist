@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+// handles user input. func and array from props through App.jsx
 export default function TodoInput(props) {
     const { handleAddTodos, todoValue, setTodoValue } = props
     

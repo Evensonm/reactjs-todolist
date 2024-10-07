@@ -3,6 +3,7 @@ import TodoInput from "./components/TodoInput"
 import TodoList from "./components/TodoList"
 
 function App() {
+  // Default list items can be deleted 
   const [todos, setTodos] = useState([
     'Go to the gym',
     'Eat healthy',
@@ -11,18 +12,21 @@ function App() {
 
   const [todoValue, setTodoValue] = useState('')
 
+  // func that allows items in list to stay
   function persistData(newList) {
     localStorage.setItem('todos', JSON.stringify({ todos:
       newList
     }))
   }
 
+  // func adds items to todo list
   function handleAddTodos(newTodo) {
     const newTodoList = [...todos, newTodo]
     persistData(newTodoList)
     setTodos(newTodoList)
   }
 
+  // func deletes item in todo list
   function handleDeleteTodo(index) {
     const newTodoList = todos.filter((todo, todoIndex) => {
       return todoIndex !== index
@@ -32,6 +36,7 @@ function App() {
 
   }
 
+  // deletes item then allows edit in entry field 
   function handleEditTodo(index) {
     const valueToBeEdited = todos[index]
     setTodoValue(valueToBeEdited)
@@ -39,6 +44,7 @@ function App() {
 
   }
 
+  // for using local storage to keep todo list  
   useEffect(() => {
     if (!localStorage){
       return
@@ -54,6 +60,7 @@ function App() {
 
   }, [])
 
+  // h1 updated 
   return (
     <>
     <h1>Productivity Planner</h1>

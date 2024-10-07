@@ -6,6 +6,7 @@
   color: #202124;
 }
 
+/* Changes to h1  */
 h1{
   font-family: 'Press Start 2P', system-ui;
   color: white;
@@ -20,6 +21,7 @@ button {
   font-family: 'Press Start 2P', system-ui;
 }
 
+/* Root css, changes to color */
 #root {
   min-height: 100vh;
   display: flex;

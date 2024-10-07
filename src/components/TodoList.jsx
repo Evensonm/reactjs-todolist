@@ -4,6 +4,7 @@ import TodoCard from './TodoCard'
 export default function TodoList(props) {
     const {todos} = props
     
+    // renders todo list through prop
     return (
         <ul className='main'>
             {todos.map((todo, todoIndex) => {
