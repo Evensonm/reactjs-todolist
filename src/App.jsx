@@ -56,6 +56,7 @@ function App() {
 
   return (
     <>
+    <h1>Productivity Planner</h1>
       <TodoInput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos} />
       <TodoList handleDeleteTodo={handleDeleteTodo} handleEditTodo= {handleEditTodo} todos={todos} />
     </>
